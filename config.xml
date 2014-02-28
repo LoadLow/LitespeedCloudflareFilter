@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<config>
+    <com>
+        <litespeed>
+            <filter>
+                <ls-report-folder>/tmp/lshttpd/</ls-report-folder>
+                <cloudflare>
+                    <!-- Api key of account -->
+                    <api-key></api-key>
+                    <!-- Email of account -->
+                    <email></email>
+                    <!-- Target domains (separated with ,) -->
+                    <domain></domain>
+                </cloudflare>
+                <attacks>
+                    <!-- Minimal augmentation to detect an attack in percents -->
+                    <min-augmentation>400.00</min-augmentation>
+                    <!-- Minimal average connections to detect an attack -->
+                    <min-average>50</min-average>
+                </attacks>
+                <intervals>
+                    <!-- Interval between two ConnectionsReport analyzes (in seconds) -->
+                    <analyze-report>30</analyze-report>
+                    <!-- Interval between two writings of logs (in seconds) -->
+                    <flush-logs>5</flush-logs>
+                    <!-- Interval between two lietspeed rtreport analyzes (in millis) -->
+                    <analyze-litespeed>2500</analyze-litespeed>
+                    <!-- Interval between two writings rtreport logs (in minutes) -->
+                    <log-stats>15</log-stats>
+                </intervals>
+                <times>
+                    <!-- Time to ban an address (in minutes) -->
+                    <address-banned>10</address-banned>
+                    <!-- Activation time of ImUnderAttack security mode (in minutes) -->
+                    <upgrade-security>15</upgrade-security>
+                </times>
+            </filter>
+        </litespeed>
+    </com>
+</config>
